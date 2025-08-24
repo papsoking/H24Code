@@ -1,0 +1,11 @@
+{
+    "name": "h24code/backend",
+    "description": "Mon API backend",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Votre Nom"
+        }
+    ],
+    "require": {}
+}
