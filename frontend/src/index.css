@@ -1,0 +1,193 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+  color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Style pour Snippets App */
+.App {
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.snippet-form {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  gap: 1rem;
+  max-width: 600px;
+  min-width: 0px;
+  background-color: #1a1a1a;
+}
+
+.snippet-form div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.snippet-form button {
+  align-self: flex-start;
+  background-color: #646cff;
+  color: white;
+  border: none;
+}
+
+.snippet-form input,
+.snippet-form textarea,
+.snippet-form select {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.snippet-form button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.filter-buttons {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li {
+  background-color: #1a1a1a;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+pre {
+  background-color: #333;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+#copier {
+  margin-top: 1rem;
+  background-color: #646cff;
+  color: white;
+  border: none;
+}
+
+@media (max-width: 425px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .snippet-form div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .snippet-form input,
+  .snippet-form textarea,
+  .snippet-form select {
+    width: auto;
+  }
+
+  .snippet-form button {
+    width: 100%;
+  }
+
+  /* .snippet-form,
+  ul {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  } */
+
+  .filter-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+}
