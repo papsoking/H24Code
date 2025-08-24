@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const API_URL = "http://localhost/H24Code/backend/api.php";
+const API_URL = import.meta.env.VITE_URL_BACKEND;
 
 function App() {
   const [snippets, setSnippets] = useState([]);

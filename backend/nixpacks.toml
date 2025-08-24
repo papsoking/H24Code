@@ -1,0 +1,6 @@
+[phases]
+setup = []
+install = []
+
+[start]
+cmd = ["vendor/bin/heroku-php-apache2", "/"]
