@@ -7,5 +7,7 @@
             "name": "Votre Nom"
         }
     ],
-    "require": {}
+    "require": {
+        "heroku/heroku-buildpack-php": "^271.0"
+    }
 }
