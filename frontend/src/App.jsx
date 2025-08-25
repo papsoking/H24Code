@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
+// URL de l'API backend
 const API_URL = import.meta.env.VITE_URL_BACKEND;
 
 function App() {
@@ -7,8 +8,7 @@ function App() {
   const [form, setForm] = useState({ title: "", description: "", category: "PHP", code: "" });
   const [filter, setFilter] = useState("");
 
-  
-
+  // Fonction pour récupérer les snippets depuis l'API
   const fetchSnippets = useCallback(async () => {
     try {
       const res = await fetch(filter ? `${API_URL}?category=${filter}` : API_URL);
@@ -23,6 +23,7 @@ function App() {
     fetchSnippets();
   }, [fetchSnippets]);
 
+  // Fonction pour gérer la soumission du formulaire
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -38,6 +39,7 @@ function App() {
     }
   };
 
+  // Fonction pour copier le code dans le presse-papiers
   const copyCode = (code) => {
     navigator.clipboard.writeText(code);
     alert("Code copié !");
