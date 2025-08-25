@@ -16,7 +16,7 @@ if ($method === 'GET') {
         $stmt = $pdo->prepare("SELECT * FROM snippets WHERE category = ?");
         $stmt->execute([$category]);
     } else {
-        $stmt = $pdo->query("SELECT * FROM snippets ORDER BY created_at DESC");
+        $stmt = $pdo->query("SELECT * FROM snippets");
     }
     echo json_encode($stmt->fetchAll(PDO::FETCH_ASSOC));
     
