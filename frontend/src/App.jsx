@@ -95,14 +95,18 @@ function App() {
 
       {/* Liste des snippets */}
       <ul>
-        {snippets.map((s) => (
+        {!snippets.length ?
+          <p>Aucun snippet disponible.</p>
+        :
+        (snippets.map((s) => (
           <li key={s.id}>
             <h3>{s.title} ({s.category})</h3>
             <p>{s.description}</p>
             <pre>{s.code}</pre>
             <button onClick={() => copyCode(s.code)} id="copier">Copier</button>
           </li>
-        ))}
+        )))
+        }
       </ul>
     </div>
   );
